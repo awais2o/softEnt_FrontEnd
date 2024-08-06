@@ -44,7 +44,6 @@ const AddProduct = ({ display, setDisplay }) => {
           `${process.env.REACT_APP_API_URL}/products/upload`,
           formData
         )
-        console.log(response)
         return response.data.url
       })
     )
@@ -64,7 +63,6 @@ const AddProduct = ({ display, setDisplay }) => {
     if (form.checkValidity() === false) {
     } else {
       addProduct({ input: { ...formData, user: user.id } })
-      //   setDisplay(false)
     }
     setValidated(true)
   }

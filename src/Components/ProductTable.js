@@ -1,6 +1,6 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
-import { useGetProductMutation, useGetProductQuery } from '../API/RestrictedAPI'
+import { useGetProductQuery } from '../API/RestrictedAPI'
 
 const ProductTable = () => {
   const { data: products } = useGetProductQuery()
@@ -22,25 +22,6 @@ const ProductTable = () => {
               <td>{product.name}</td>
               <td>{product.price}</td>
               <td>{product.quantity}</td>
-              {/* <td> <div style={{ display: 'flex', gap: '10px' }}>
-                            <div
-                              onClick={() => {
-                                setDisplay(true)
-                               
-                                setOperate(item)
-                              }}
-                            >
-                              <OverlayTrigger
-                                placement='top'
-                                overlay={<Tooltip id='tooltip'>View</Tooltip>}
-                              >
-                                <img src='/eye.svg' alt='Eye' />
-                              </OverlayTrigger>
-                            </div>
-                         
-                          
-                            
-                          </div></td> */}
             </tr>
           ))
         ) : (
