@@ -150,6 +150,7 @@ const AddProduct = ({ display, setDisplay }) => {
               multiple
               onChange={handleFileChange}
               disabled={uploading}
+              accept='image/*'
             />
             <Form.Control.Feedback type='invalid'>
               Please upload up to 6 images.
