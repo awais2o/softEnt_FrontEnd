@@ -118,10 +118,11 @@ const AddProduct = ({ display, setDisplay }) => {
               name='price'
               value={formData.price}
               onChange={handleChange}
+              max={100000}
               placeholder='Enter price'
             />
             <Form.Control.Feedback type='invalid'>
-              Please provide a price.
+              Please provide a price (less than 100000).
             </Form.Control.Feedback>
           </Form.Group>
 
@@ -131,12 +132,13 @@ const AddProduct = ({ display, setDisplay }) => {
               required
               type='number'
               name='quantity'
+              max={100000}
               value={formData.quantity}
               onChange={handleChange}
               placeholder='Enter quantity'
             />
             <Form.Control.Feedback type='invalid'>
-              Please provide a quantity.
+              Please provide a quantity( less than 100000).
             </Form.Control.Feedback>
           </Form.Group>
 
