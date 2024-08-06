@@ -15,7 +15,7 @@ const ProductTable = () => {
         </tr>
       </thead>
       <tbody>
-        {products.length > 0 ? (
+        {products?.length > 0 ? (
           products?.map((product, index) => (
             <tr key={product._id}>
               <td>{index + 1}</td>
