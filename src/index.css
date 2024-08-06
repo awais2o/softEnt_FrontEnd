@@ -11,3 +11,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Ensure the entire body takes the full height */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: rgb(175, 246, 243);
+  background: linear-gradient(311deg, rgba(175, 246, 243, 1) 44%, rgba(23, 177, 207, 1) 100%);
+}
+
+
+#root,
+.App {
+  height: 100%;
+}
+
+.hover:hover {
+  color: white !important;
+  background-color: blue !important;
+  /* Bootstrap secondary color */
+  border-color: #6c757d !important;
+
+}
+
+.image-container {
+  display: flex;
+  overflow-x: auto;
+  padding-top: 10px;
+}
+
+.uploaded-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.transparent-table {
+  background-color: transparent !important;
+
+}
+
+.transparent-table thead,
+.transparent-table tbody,
+.transparent-table th,
+.transparent-table td,
+.transparent-table tr {
+  background-color: transparent !important;
+}

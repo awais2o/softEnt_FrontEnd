@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg'
+import { Toaster } from 'react-hot-toast'
+import './App.css'
+import React, { createContext, useState, useContext } from 'react'
+import LoginPage from './Pages/LoginPage'
+import UserProvider from './Providers/UserProvider'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import PrivateRoute from './Components/PrivateRoute'
+import ProductPage from './Pages/ProductPage'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Toaster />
+      <UserProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<LoginPage />} />
+            <Route
+              path='/product'
+              element={
+                <PrivateRoute>
+                  <ProductPage />
+                </PrivateRoute>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </UserProvider>
+    </>
+  )
 }
 
-export default App;
+export default App
