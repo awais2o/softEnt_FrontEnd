@@ -14,7 +14,7 @@ const ProductPage = () => {
       <section className=' mt-3 ms-3'>
         <Row className='mb-3'>
           <Col sm={12} md={6}>
-            <h4>Products</h4>
+            <h3>Products</h3>
           </Col>
           <Col
             sm={12}
